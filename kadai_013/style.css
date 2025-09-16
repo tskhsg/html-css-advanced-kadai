@@ -8,12 +8,12 @@ p {
   font-size: 15px;
 }
 
-#main-visual>img {
+#main-visual > img {
   width: 100%;
 }
 
 /*================
-PC用のスタイル 
+PC用のスタイル
 =================*/
 @media screen and (min-width: 768px) {
   /* 横幅設定 */
@@ -37,123 +37,131 @@ PC用のスタイル
   }
 
   /* ナビゲーションのリンクの装飾設定 */
-  #nav-pc>a {
+  #nav-pc > a {
     text-decoration: none;
     margin-left: 20px;
   }
 
-  #nav-pc>a:link {
+  #nav-pc > a:link {
     color: #0d0d0d;
   }
 
-  #nav-pc>a:visited {
+  #nav-pc > a:visited {
     color: #0d0d0d;
   }
 
-  #nav-pc>a:hover {
+  #nav-pc > a:hover {
     color: #0d0d0d;
     text-decoration: underline;
   }
 
-  #nav-pc>a:active {
+  #nav-pc > a:active {
     color: #0d0d0d;
   }
 
   #menu-sp {
-  display: none;
- }
+    display: none;
+  }
 
- #nav-sp {
-  display: none;
- }
+  #nav-sp {
+    display: none;
+  }
 }
-/*画面幅が767px以下のとき*/
-@media screen and (max-width: 767px) {
 
-  /*PCのナビゲーションを非表示に*/
+@media screen and (max-width: 767px) {
+  /* PC用ナビゲーション非表示 */
   body {
     min-width: 375px;
     margin: 0;
   }
-  
+
   #nav-pc {
     display: none;
   }
 
-  /*ハンバーガーメニュー*/
+  /* ハンバーガーメニュー */
+
   #menu-sp {
+    display: block;
+    background-color: transparent;
     float: right;
     padding: 0;
+    border: none;
   }
 
-  /*スマホ用ナビゲーションの表示切替*/
-#nav-sp {
-  background-color: #ce933e;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: none;
-  z-index: 100;
-}
+  /* スマホ用ナビゲーションの表示切替*/
+  /* 初期状態、レイアウトと非表示設定 */
+  #nav-sp {
+    background-color: #ce933e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 100;
+  }
 
-#nav-sp ul {
-  padding-left: 0;
-  
-}
+  #nav-sp ul {
+    padding-left: 0px;
+  }
 
-#nav-sp li {
-  list-style: none;
-}
-/*xボタン*/
-#close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #ce933e;
-  border: none;
-}
+  #nav-sp li {
+    list-style: none;
+  }
 
-/*ナビゲーションメニュー用ロゴ*/
-#logo-sp {
- margin: 80px 0 80px 20px;
-}
+  #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: transparent;
+    border: none;
+  }
 
-#nav-sp > a {
-  display: block;
-}
+  #logo-sp {
+    /* margin: 130px 0 30px 20px; */
+    margin: 80px 0 30px 20px;
+  }
 
-#nav-sp > a:link  {
-  color: #ffffff;
-}
+  #nav-sp a {
+    display: block;
+    /* margin: 20px 20px 20px 20px; */
+  }
 
-#nav-sp > a:visited {
-  color: #ffffff;
-}
+  #nav-sp a:link {
+    color: #ffffff;
+    text-decoration: none;
+  }
 
-#nav-sp > a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
+  #nav-sp a:visited {
+    color: #ffffff;
+  }
 
-#nav-sp > a:active {
-  color: #ffffff;
-}
+  #nav-sp a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
 
-#nav-sp .menu {
-  text-decoration: none;
-  display: block;
-  margin: 0 20px;
-  height: 44px;
-  font-size: 16px;
-  background-image: url("images/arrow.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  color: #ffffff;
-}
+  #nav-sp a:active {
+    color: #ffffff;
+  }
 
-#nav-sp ul li:first-child {
-  margin-bottom: 50px; 
+  #nav-sp a:active {
+    color: #ffffff;
+  }
+
+  #nav-sp .menu {
+    text-decoration: none;
+    /* margin: 0px, 20px, 0px, 20px; */
+    margin: 0px 20px 0px 20px;
+    height: 44px;
+    font-size: 16px;
+    background-image: url("images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+  #nav-sp .menu:hover {
+  border-bottom: 2px solid #fff; 
+  padding-bottom: 4px;           
 }
 }
