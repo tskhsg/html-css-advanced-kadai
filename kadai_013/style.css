@@ -60,84 +60,100 @@ PC用のスタイル
   }
 
   #menu-sp {
-    display: none;
-  }
+  display: none;
+ }
 
-  #nav-sp {
-    display: none;
-  }
+ #nav-sp {
+  display: none;
+ }
 }
+/*画面幅が767px以下のとき*/
+@media screen and (max-width: 767px) {
 
-/*====================
-  スマートフォン用のスタイル
- =====================*/
- @media screen and (max-width: 767px) {
-   /* PC用ナビゲーション非表示 */
-   #nav-pc {
-     display: none;
-   }
-
-   body {
+  /*PCのナビゲーションを非表示に*/
+  body {
     min-width: 375px;
     margin: 0;
-   }
-
-   /* ハンバーガーメニュー */
-   #menu-sp {
-     float:right;
-     padding: 0;
-   }
- 
-   /* スマホ用ナビゲーションの表示切替*/
-   /* 初期状態、レイアウトと非表示設定 */
-   #nav-sp {
-     background-color: #ce933e;
-     position: absolute;
-     left: 0;
-     top: 0;
-     height: 100%;
-     width: 100%;
-     display: none;
-     z-index: 100;
-   }
-   #nav-sp ul {
-    padding-left: 0;
-   }
-   #nav-sp li {
-    list-style: none;
-   }
-   #close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-   }
-   #logo-sp {
-    margin: 80px 0px 30px 20px;
-   }
-   #nav-sp a {
-    display: block;
-   }
-   #nav-spa:link {
-    color: #ffffff;
-   }
-   #nav-spa:visited {
-    color: #ffffff;
-   }
-   #nav-spa:hover {
-    color: #ffffff;
-    text-decoration: underline;
-   }
-   #nav-spa:active {
-    color: #ffffff;
-   }
-   #nav-sp.menu {
-    text-decoration:none;
-    display: block;
-    margin: 0px 20px;
-    height: 44px;
-    font-size: 16px;
-    background-image: url("images/arrow.png");
-    background-repeat: no-repeat;
-    background-position: right top;
-   }
   }
+  
+  #nav-pc {
+    display: none;
+  }
+
+  /*ハンバーガーメニュー*/
+  #menu-sp {
+    float: right;
+    padding: 0;
+  }
+
+  /*スマホ用ナビゲーションの表示切替*/
+#nav-sp {
+  background-color: #ce933e;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  z-index: 100;
+}
+
+#nav-sp ul {
+  padding-left: 0;
+  
+}
+
+#nav-sp li {
+  list-style: none;
+}
+/*xボタン*/
+#close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ce933e;
+  border: none;
+}
+
+/*ナビゲーションメニュー用ロゴ*/
+#logo-sp {
+ margin: 80px 0 80px 20px;
+}
+
+#nav-sp > a {
+  display: block;
+}
+
+#nav-sp > a:link  {
+  color: #ffffff;
+}
+
+#nav-sp > a:visited {
+  color: #ffffff;
+}
+
+#nav-sp > a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+#nav-sp > a:active {
+  color: #ffffff;
+}
+
+#nav-sp .menu {
+  text-decoration: none;
+  display: block;
+  margin: 0 20px;
+  height: 44px;
+  font-size: 16px;
+  background-image: url("images/arrow.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  color: #ffffff;
+}
+
+#nav-sp ul li:first-child {
+  margin-bottom: 50px; 
+}
+}
