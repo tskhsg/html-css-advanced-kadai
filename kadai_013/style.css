@@ -160,8 +160,4 @@ PC用のスタイル
     background-repeat: no-repeat;
     background-position: right top;
   }
-  #nav-sp .menu:hover {
-  border-bottom: 2px solid #fff; 
-  padding-bottom: 4px;           
-}
 }
